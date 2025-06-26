@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My eResume</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .background {
+      background: url("bg_index.gif") no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      height: 100%;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      padding: 28px;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 100;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .navbar {
+      background-color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      position: sticky;
+      top: 88px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: red;
+    }
+
+    iframe {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 100px);
+      border: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="overlay"></div>
+
+    <header>
+      <h2>Digital Portfolio</h2>
+    </header>
+
+    <div class="navbar">
+      <a href="#" onclick="showSection('home', 'home.html')" class="active">Home</a>
+      <a href="#" onclick="showSection('profile', 'profile.html')">Profile</a>
+      <a href="#" onclick="showSection('education', 'education.html')">Education</a>
+      <a href="#" onclick="showSection('skills', 'skills.html')">Skills</a>
+      <a href="#" onclick="showSection('hobbies', 'hobbies.html')">Hobbies</a>
+      <a href="#" onclick="showSection('family', 'family.html')">Family</a>
+      <a href="#" onclick="showSection('journal', 'gallery.html')">Gallery</a>
+    </div>
+
+    <iframe name="contentframe" id="contentframe"></iframe>
+  </div>
+
+  <script>
+    function showSection(id, url) {
+      const iframe = document.getElementById('contentframe');
+      const navLinks = document.querySelectorAll('.navbar a');
+      navLinks.forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+      iframe.src = url;
+    }
+
+    window.onload = function () {
+      document.querySelector('.navbar a').classList.add('active');
+      document.getElementById('contentframe').src = 'home.html';
+    };
+  </script>
+</body>
+</html>
+

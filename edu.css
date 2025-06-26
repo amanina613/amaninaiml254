@@ -1,0 +1,71 @@
+body {
+      margin: 0;
+      padding: 40px;
+      font-family: Verdana, sans-serif;
+      background-color: #e0f7fa;
+      color: cadetblue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .education-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .edu-box {
+      background-color: #e0f7fa;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: justify;
+      transition: transform 0.3s ease;
+    }
+
+    .edu-box:hover {
+      transform: scale(1.03);
+    }
+
+    .edu-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .edu-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .edu-box {
+        width: 90%;
+      }
+    }
+
+
+ #footer-info {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 10px;
+  z-index: 10;
+  text-align: left;
+  max-width: 90%;
+}

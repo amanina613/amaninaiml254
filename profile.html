@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Courier', serif;
+      background-color: CadetBlue;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 40px;
+      color: snow;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    #div1 {
+      font-size: 40px;
+    }
+
+    .profile-container {
+      background-color: #e0f7fa;
+      color: #333;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile-info {
+      flex: 1 1 55%;
+    }
+
+    .profile-info h3 {
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #004d4d;
+    }
+
+    .profile-info p {
+      margin-top: 0;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .profile-info ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .profile-info li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .profile-pic {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .profile-pic img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #004d4d;
+    }
+
+    @media screen and (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-info, .profile-pic {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      h1 {
+        flex-direction: column;
+      }
+    }
+
+    #footer-info {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      left: 20px;
+      font-size: 12px;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 15px;
+      border-radius: 10px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="myAudio" src="charging.mp3" autoplay></audio>
+
+  <h1>
+    MY PROFILE
+    <div id="div1" class="fa"></div>
+  </h1>
+
+  <div class="profile-container">
+    <div class="profile-info">
+      <h3>Nur Amanina Sufina</h3>
+      <p>Aspiring Content Manager | Student at Universiti Teknologi MARA</p>
+
+      <h4>About Me</h4>
+      <p>I am a content management student passionate about digital communication and information organization, skilled in creative writing.</p>
+
+      <h4>Personal Information</h4>
+      <ul>
+        <li><strong>Full Name:</strong> Nur Amanina Sufina binti Mohd Haffiz</li>
+        <li><strong>Phone:</strong> 017-3171245</li>
+        <li><strong>Email:</strong> amaninasfn@gmail.com</li>
+        <li><strong>Address:</strong> Hulu Langat, Selangor</li>
+      </ul>
+    </div>
+
+    <div class="profile-pic">
+      <img src="profpic.jpg" alt="Profile Picture">
+    </div>
+  </div>
+
+  <div id="footer-info">
+    <p style="margin: 0; font-weight: bold;">Disclaimer:</p>
+    <p style="margin: 0;">
+      &copy; 2025 Nur Amanina Sufina binti Mohd Haffiz. <br>
+      Best viewed in Google Chrome | 1366 x 768 resolution | Last updated: 26 June 2025 <br>
+      All logos included are Google-sourced and pictures are original works by the website author.
+    </p>
+  </div>
+
+  <script>
+    function chargebattery() {
+      var a = document.getElementById("div1");
+      a.innerHTML = "&#xf244;";
+      setTimeout(() => { a.innerHTML = "&#xf243;"; }, 1000);
+      setTimeout(() => { a.innerHTML = "&#xf242;"; }, 2000);
+      setTimeout(() => { a.innerHTML = "&#xf241;"; }, 3000);
+      setTimeout(() => { a.innerHTML = "&#xf240;"; }, 4000);
+    }
+    chargebattery();
+    setInterval(chargebattery, 5000);
+
+    window.addEventListener('scroll', function () {
+      const footer = document.getElementById('footer-info');
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const bodyHeight = document.body.offsetHeight;
+
+      if (scrollY + windowHeight >= bodyHeight - 10) {
+        footer.style.display = 'block';
+      } else {
+        footer.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
+

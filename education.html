@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="edu.css">
+  <title>Education</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Verdana, sans-serif;
+      background-color: #e0f7fa;
+      color: cadetblue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .education-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .edu-box {
+      background-color: #e0f7fa;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: justify;
+      transition: transform 0.3s ease;
+    }
+
+    .edu-box:hover {
+      transform: scale(1.03);
+    }
+
+    .edu-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .edu-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .edu-box {
+        width: 90%;
+      }
+    }
+
+
+ #footer-info {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 10px;
+  z-index: 10;
+  text-align: left;
+  max-width: 90%;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h1>My Education Background</h1>
+
+  <div class="education-container">
+
+    <div class="edu-box">
+      <img src="logotaam.jpeg" alt="Primary School">
+      <div class="edu-title">Primary School</div>
+      <ul>
+        <li>Sekolah Kebangsaan Tun Abdul Aziz Majid</li>
+        <li>Year: 2012-2017</li>
+        <li>Achieved 5A's in UPSR</li>
+     </ul>
+    </div>
+
+    <div class="edu-box">
+      <img src="logosmaja.png" alt="Secondary School">
+      <div class="edu-title">Secondary School</div>
+      <ul>
+        <li>Sekolah Menengah Kebangsaan Abdul Jalil</li>
+        <li>Year: 2018-2022</li>
+        <li>Achieved 5A's in SPM</li>
+     </ul>
+    </div>
+
+   <div class="edu-box">
+      <img src="uitmlogo.png" alt="University">
+      <div class="edu-title">University</div>
+      <ul>
+        <li>Universiti Teknologi Mara</li>
+        <li>Year: 2023-current</li>
+     </ul>
+    </div>
+  </div>
+
+ <div id="footer-info">
+  <p style="margin: 0; font-weight: bold;">Disclaimer:</p>
+  <p style="margin: 0;">
+    &copy; 2025 Nur Amanina Sufina binti Mohd Haffiz. <br>
+    Best viewed in Google Chrome | 1366 x 768 resolution | Last updated: 26 June 2025 <br>
+    All logos included are Google-sourced and pictures are original works by the website author.
+  </p>
+</div>
+
+
+ <script>
+  window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer-info');
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.offsetHeight;
+
+    if (scrollY + windowHeight >= bodyHeight - 10) {
+      footer.style.display = 'block';
+    } else {
+      footer.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

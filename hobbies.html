@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Hobbies</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    background-color: #e0f7fa;
+    color: #00695c;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .card {
+    width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+
+
+ #footer-info {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 10px;
+  z-index: 10;
+  text-align: left;
+  max-width: 90%;
+}
+
+</style>
+</head>
+<body>
+
+<h1>My Hobbies</h1>
+
+<center><a href="#H1">1</a> / <a href="#H2">2</a> / <a href="#H3">3</a> / <a href="#H4">4</a></center> / 
+
+
+<center><h2 id="H1">Hobby 1</h2></center>
+<div class="card" id="cafe">
+   <img src="cafe.jpg" alt="Cafe">
+   <div class="container">
+     <h2><b>Cafe hopping</b></h2> 
+   </div>
+ </div>
+
+<center><h2 id="H2">Hobby 2</h2></center>
+<div class="card" id="pinterest">
+  <img src="pinterest.jpg" alt="Pinterest">
+  <div class="container">
+    <h2><b>Decorating pinterest boards</b></h2>  
+  </div>
+</div>
+
+<center><h2 id="H3">Hobby 3</h2></center>
+<div class="card" id="sightseeing">
+  <img src="sight.jpg" alt="Sight">
+  <div class="container">
+    <h2><b>Sightseeing</b></h2>  
+  </div>
+</div>
+
+<center><h2 id="H4">Hobby 4</h2></center>
+<div class="card" id="music">
+     <a href="https://open.spotify.com/playlist/6J6A02BbPwTdgbYsG87kYR?si=IO1uX6uWQ5qFiVuYCHq3gA&pi=NVtVCIW_TPak3"><img src="music.jpg" alt="Music";></a>
+     <div class="container">
+     <h2><b>Listening to music</b></h2>
+     </a>
+  </div>
+</div>
+
+
+ <div id="footer-info">
+  <p style="margin: 0; font-weight: bold;">Disclaimer:</p>
+  <p style="margin: 0;">
+    &copy; 2025 Nur Amanina Sufina binti Mohd Haffiz. <br>
+    Best viewed in Google Chrome | 1366 x 768 resolution | Last updated: 26 June 2025 <br>
+    All logos included are Google-sourced and pictures are original works by the website author.
+  </p>
+</div>
+
+
+ <script>
+  window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer-info');
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.offsetHeight;
+
+    if (scrollY + windowHeight >= bodyHeight - 10) {
+      footer.style.display = 'block';
+    } else {
+      footer.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
